@@ -1,0 +1,490 @@
+/* =============================================
+   TRENDY Media Lab – Custom Styles
+   Palette: #5E2CA5 | #F4C542 | #111111 | #F2F2F2
+   ============================================= */
+
+:root {
+  --violet: #5E2CA5;
+  --yellow: #F4C542;
+  --dark:   #111111;
+  --light:  #F2F2F2;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--violet); color: #fff; }
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: var(--violet); border-radius: 3px; }
+
+/* ---- Navbar ---- */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s;
+}
+.navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+
+.nav-link {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: var(--violet);
+  transition: width 0.3s;
+}
+.nav-link:hover { color: var(--violet); }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-link.active { color: var(--violet); }
+
+/* ---- Buttons ---- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: var(--yellow);
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(244,197,66,0.4);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: var(--violet);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(94,44,165,0.35);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.4);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-outline:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ---- Hero gradient ---- */
+.hero-gradient {
+  background: linear-gradient(135deg, #5E2CA5 0%, #3a1878 60%, #280f56 100%);
+}
+
+/* ---- Page header (internal pages) ---- */
+.page-header {
+  padding: 8rem 0 5rem;
+  background: linear-gradient(135deg, #5E2CA5 0%, #3a1878 100%);
+}
+
+/* ---- Cards ---- */
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  border: 1.5px solid #e5e7eb;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card:hover {
+  border-color: var(--violet);
+  box-shadow: 0 8px 32px rgba(94,44,165,0.12);
+  transform: translateY(-4px);
+}
+
+/* ---- Icon box ---- */
+.icon-box {
+  width: 2.75rem; height: 2.75rem;
+  border-radius: 0.625rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ---- Number badge (metodo) ---- */
+.step-number {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(94,44,165,0.12);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Section tag ---- */
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--violet);
+  margin-bottom: 0.75rem;
+}
+
+/* ---- Divider ---- */
+.divider {
+  width: 3rem; height: 3px;
+  background: var(--yellow);
+  border-radius: 2px;
+  margin: 1rem 0 1.5rem;
+}
+
+/* ---- Form ---- */
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.625rem;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  color: var(--dark);
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.form-input:focus {
+  border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(94,44,165,0.1);
+}
+.form-input::placeholder { color: #9ca3af; }
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+/* ---- Footer ---- */
+.footer {
+  background: var(--dark);
+}
+
+/* ---- Fade-in animation ---- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Social icon (footer) ---- */
+.social-icon {
+  width: 2.125rem; height: 2.125rem;
+  border-radius: 0.5rem;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.55);
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.social-icon:hover {
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+}
+
+/* ---- Mobile menu ---- */
+#mobileMenu {
+  display: none;
+  border-top: 1px solid #f3f4f6;
+  background: #fff;
+}
+#mobileMenu.open { display: block; }
+
+/* ---- Responsive helpers ---- */
+@media (max-width: 767px) {
+  .hero-h1 { font-size: 2.5rem !important; }
+  .page-header { padding: 7rem 0 3.5rem; }
+}
+
+/* ---- Tablet (< 1024px): gap griglie a 2 colonne ---- */
+@media (max-width: 1023px) {
+  .gap-16 { gap: 2.5rem !important; }
+}
+
+/* ---- Mobile (< 640px): ottimizzazioni generali ---- */
+@media (max-width: 639px) {
+  /* Padding sezioni ridotto */
+  section[class*="py-24"] { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+  section[class*="py-28"] { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+  section[class*="py-20"] { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  section[class*="py-16"] { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  /* Gap griglia footer / sezioni */
+  .gap-12 { gap: 2rem !important; }
+  /* Heading grandi */
+  .text-5xl { font-size: 2.25rem !important; }
+  /* Logo navbar: altezza ridotta su schermi piccoli */
+  .navbar-logo { height: 2rem !important; }
+  /* Testo hero intro */
+  .hero-gradient .text-lg { font-size: 1rem !important; }
+  /* Fasi metodo: padding ridotto nelle card */
+  .space-y-6 > .fade-in[class*="p-8"] { padding: 1.25rem !important; }
+}
+
+
+/* ==============================================
+   DARK MODE
+   Classe .dark su <html>
+   ============================================== */
+
+/* ---- Transizione globale ---- */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---- Toggle button ---- */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  transition: color 0.2s, background 0.2s;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.theme-toggle:hover { background: #f3f4f6; }
+html.dark .theme-toggle { color: #c4b5fd; }
+html.dark .theme-toggle:hover { background: rgba(255,255,255,0.1); }
+
+/* ---- Body & sfondo base ---- */
+html.dark body {
+  background-color: #0D0919;
+  color: #F0EAF8;
+}
+
+/* ---- Navbar ---- */
+html.dark .navbar {
+  background: rgba(13,9,25,0.97);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+html.dark .nav-link { color: #c4b5fd; }
+html.dark .nav-link:hover,
+html.dark .nav-link.active { color: #F0EAF8; }
+html.dark .nav-link::after { background: #c4b5fd; }
+
+/* ---- Mobile menu ---- */
+html.dark #mobileMenu {
+  background: #0D0919;
+  border-top-color: rgba(255,255,255,0.08);
+}
+html.dark #mobileMenu a.text-sm { color: #c4b5fd !important; }
+html.dark #mobileMenu a:hover { color: #F0EAF8; }
+
+/* ---- Hamburger icon ---- */
+html.dark #menuBtn svg { color: #c4b5fd; }
+
+/* ---- Sezioni bianche (bg-white) ---- */
+html.dark .bg-white { background-color: #0D0919 !important; }
+html.dark section.bg-white { background-color: #0D0919 !important; }
+
+/* ---- Sezioni grigio chiaro (background:#F2F2F2 inline) ---- */
+html.dark [style*="background:#F2F2F2"] { background-color: #160D2B !important; }
+
+/* ---- Card ---- */
+html.dark .card {
+  background: #1C1236 !important;
+  border-color: #2D1F4E !important;
+  color: #F0EAF8;
+}
+html.dark .card:hover {
+  border-color: var(--violet) !important;
+  box-shadow: 0 8px 32px rgba(94,44,165,0.25);
+}
+
+/* ---- Card bianche nelle sezioni ---- */
+html.dark .bg-white.p-6,
+html.dark .bg-white.p-8,
+html.dark .bg-white.p-10 { background-color: #1C1236 !important; }
+
+/* ---- Testo grigio Tailwind ---- */
+html.dark .text-gray-900 { color: #F0EAF8 !important; }
+html.dark .text-gray-800 { color: #EDE9F8 !important; }
+html.dark .text-gray-700 { color: #D8D0F0 !important; }
+html.dark .text-gray-600 { color: #9B8AC4 !important; }
+html.dark .text-gray-500 { color: #7B6AA8 !important; }
+html.dark .text-gray-400 { color: #6A5A9A !important; }
+
+/* ---- Bordi ---- */
+html.dark .border-gray-100 { border-color: #2D1F4E !important; }
+html.dark .border-gray-200 { border-color: #3D2A6E !important; }
+html.dark [class*="border-2"][class*="border-gray"] { border-color: #2D1F4E !important; }
+
+/* ---- Form inputs ---- */
+html.dark .form-input {
+  background: #1C1236;
+  border-color: #3D2A6E;
+  color: #F0EAF8;
+}
+html.dark .form-input:focus {
+  border-color: var(--violet);
+  box-shadow: 0 0 0 3px rgba(94,44,165,0.2);
+}
+html.dark .form-input::placeholder { color: #5a4a82; }
+html.dark .form-label { color: #c4b5fd; }
+html.dark select.form-input option { background: #1C1236; color: #F0EAF8; }
+
+/* ---- Form container (bg-white card contatti) ---- */
+html.dark .bg-white.rounded-2xl { background-color: #1C1236 !important; }
+
+/* ---- Privacy checkbox label ---- */
+html.dark .text-gray-500.leading-relaxed { color: #7B6AA8 !important; }
+
+/* ---- Shadow ---- */
+html.dark .shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.4) !important; }
+
+/* ---- Section tag ---- */
+html.dark .section-tag { color: #a78bfa; }
+
+/* ---- Divider ---- */
+html.dark .divider { background: var(--yellow); }
+
+/* ---- Step number (metodo) ---- */
+html.dark .step-number { color: rgba(196,181,253,0.12); }
+
+/* ---- Quote/highlight box (chi-siamo: bg-F2F2F2 + border-violet) ---- */
+html.dark [style*="background:#F2F2F2"][style*="border-color"] {
+  background: #1C1236 !important;
+}
+/* Testo interno al quote box */
+html.dark [style*="background:#F2F2F2"][style*="border-color"] p {
+  color: #F0EAF8 !important;
+}
+
+/* ---- Card "perché scegliere" (bianche con icon-box viola) ---- */
+html.dark .bg-white.p-6.rounded-2xl { background-color: #1C1236 !important; }
+html.dark .bg-white.p-8.rounded-2xl { background-color: #1C1236 !important; }
+
+/* ---- Cards punti distintivi (chi-siamo: border-2 border-gray-100) ---- */
+html.dark .border-2.border-gray-100 { border-color: #2D1F4E !important; }
+html.dark .border-2.border-gray-100:hover { border-color: var(--violet) !important; }
+
+/* ---- Metodo: fasi border-2 border-gray-100 ---- */
+html.dark .border-2[class*="border-gray"] { border-color: #2D1F4E !important; }
+html.dark .border-2[class*="border-gray"]:hover { border-color: var(--violet) !important; }
+html.dark .border-2[class*="border-gray"] h3 { color: #F0EAF8 !important; }
+
+/* ---- Metodo: mini card bianche (4 fasi, bg-white shadow-sm) ---- */
+html.dark .rounded-2xl.bg-white.shadow-sm { background-color: #1C1236 !important; }
+
+/* ---- Numeri hero (index: visual cards) ---- */
+html.dark .col-span-2.p-8 { /* viola, lasciare invariato */ }
+html.dark [style*="background:#F4C542"] { /* giallo, lasciare invariato */ }
+html.dark .bg-white.border-2[style*="border-color"] {
+  background: #1C1236 !important;
+}
+
+/* ---- Testimonianze card ---- */
+html.dark .bg-white.border-2.border-gray-100.p-8 { background: #1C1236 !important; border-color: #2D1F4E !important; }
+
+/* ---- Footer: già scuro, piccoli aggiustamenti ---- */
+html.dark .footer { background: #060310; }
+
+/* ---- Scrollbar dark ---- */
+html.dark ::-webkit-scrollbar-track { background: #160D2B; }
+
+/* ---- FAQ accordion (servizi) ---- */
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+html.dark .faq-item { border-bottom-color: #2D1F4E; }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111111;
+  transition: color 0.2s;
+  user-select: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--violet); }
+html.dark .faq-item summary { color: #F0EAF8; }
+html.dark .faq-item summary:hover { color: #c4b5fd; }
+.faq-item summary .faq-arrow {
+  width: 1.5rem; height: 1.5rem;
+  flex-shrink: 0;
+  color: var(--violet);
+  transition: transform 0.3s;
+}
+details[open] .faq-arrow { transform: rotate(180deg); }
+.faq-body {
+  padding-bottom: 1.25rem;
+  font-size: 0.9375rem;
+  color: #4b5563;
+  line-height: 1.75;
+}
+html.dark .faq-body { color: #9B8AC4; }
+
+/* ---- Validazione form ---- */
+.field-error {
+  font-size: 0.8125rem;
+  color: #dc2626;
+  margin-top: 0.375rem;
+  display: none;
+}
+.form-input.invalid {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(220,38,38,0.1) !important;
+}
+html.dark .field-error { color: #f87171; }
