@@ -1,0 +1,21 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+# Redirect HTTP → HTTPS (Netlify lo fa già in automatico, ma è buona prassi dichiararlo)
+[[redirects]]
+  from = "http://trendymedialab.it/*"
+  to = "https://trendymedialab.it/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.trendymedialab.it/*"
+  to = "https://trendymedialab.it/:splat"
+  status = 301
+  force = true

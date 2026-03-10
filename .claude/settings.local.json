@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(py:*)",
+      "Bash(python.exe --version:*)",
+      "Bash(git -C \"D:/Desktop/sito consulenze\" status)",
+      "Bash(git -C \"D:/Desktop/sito consulenze\" init)",
+      "Bash(git -C \"D:/Desktop/sito consulenze\" add \"css/style.css\" \"js/theme.js\" \"js/cookie-banner.js\" \"index.html\" \"chi-siamo.html\" \"servizi.html\" \"metodo.html\" \"contatti.html\" \"privacy-policy.html\" \"cookie-policy.html\" \"termini-condizioni.html\")",
+      "Bash(git -C:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
