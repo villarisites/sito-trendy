@@ -1,7 +1,7 @@
 (function () {
   var btn = document.createElement('a');
   btn.id = 'whatsappBtn';
-  btn.href = 'https://wa.me/393884093507?text=Ciao%2C%20vorrei%20saperne%20di%20pi%C3%B9%20sui%20vostri%20servizi!';
+  btn.href = 'https://wa.me/393884093507?text=Ciao%2C%20ho%20visto%20il%20vostro%20sito%20e%20vorrei%20ricevere%20maggiori%20informazioni%20sui%20vostri%20servizi.';
   btn.target = '_blank';
   btn.rel = 'noopener noreferrer';
   btn.setAttribute('aria-label', 'Contattaci su WhatsApp');

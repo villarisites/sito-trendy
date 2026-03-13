@@ -21,12 +21,13 @@
   ].join(';');
 
   // Ascolta cambi tema per aggiornare il banner se già visibile
-  document.documentElement.addEventListener('classchange', function() {
+  var themeObserver = new MutationObserver(function() {
     if (!banner.parentNode) return;
     var nowDark = document.documentElement.classList.contains('dark');
     banner.style.background = nowDark ? '#1C1236' : '#fff';
     banner.style.boxShadow = nowDark ? '0 -6px 40px rgba(0,0,0,0.4)' : '0 -6px 40px rgba(0,0,0,0.13)';
   });
+  themeObserver.observe(document.documentElement, { attributeFilter: ['class'] });
 
   banner.innerHTML =
     '<div style="max-width:1280px;margin:0 auto;padding:1rem 1.5rem;'
