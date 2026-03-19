@@ -10,6 +10,19 @@
   --light:  #F2F2F2;
 }
 
+/* ---- Logo floating animation ---- */
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  33%  { transform: translateY(-32px) rotate(3deg); }
+  66%  { transform: translateY(-14px) rotate(-2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.logo-float {
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 20px 40px rgba(94,44,165,0.35));
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -127,8 +140,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(94, 44, 165, 0.78), rgba(40, 15, 86, 0.88)),
-    url('../assets/foto hero.png') center/cover no-repeat;
+    linear-gradient(rgba(94, 44, 165, 0.55), rgba(40, 15, 86, 0.70)),
+    url('../assets/Art 3D GIF by Pi-Slices.gif') center/cover no-repeat;
   filter: blur(3px);
   transform: scale(1.05); /* evita aloni bianchi ai bordi */
   z-index: 0;
@@ -610,7 +623,7 @@ h1, h2, h3 {
   width: 36px; height: 36px;
   border: 2px solid var(--violet);
   transform: translate(-50%, -50%);
-  transition: transform 0.12s ease, width 0.2s ease, height 0.2s ease, opacity 0.3s;
+  transition: width 0.2s ease, height 0.2s ease, opacity 0.3s, background 0.2s, border-color 0.2s;
 }
 #cursor-ring.cursor-hover {
   width: 54px; height: 54px;

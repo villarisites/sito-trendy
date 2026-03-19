@@ -40,7 +40,7 @@
 
         <!-- Logo -->
         <a href="index.html" class="flex items-center">
-          <img src="assets/logo piccolo viola.PNG" alt="TRENDY Media Lab" class="navbar-logo h-10 w-auto" />
+          <img src="assets/logo trasparente piccolo.svg" alt="TRENDY Media Lab" class="navbar-logo h-10 w-auto" />
         </a>
 
         <!-- Desktop nav -->
@@ -92,35 +92,48 @@
 
   <!-- ========== HERO ========== -->
   <section class="hero-gradient min-h-screen flex items-center pt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-36">
-      <div class="max-w-3xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-36 w-full">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8"
-             style="background:rgba(244,197,66,0.15); border:1px solid rgba(244,197,66,0.3);">
-          <span class="w-2 h-2 rounded-full animate-pulse" style="background:#F4C542;"></span>
-          <span class="text-xs font-bold uppercase tracking-widest" style="color:#F4C542;">Social Media Marketing Agency</span>
+        <!-- Testo -->
+        <div class="flex-1 max-w-2xl">
+
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-8"
+               style="background:rgba(244,197,66,0.15); border:1px solid rgba(244,197,66,0.3);">
+            <span class="w-2 h-2 rounded-full animate-pulse" style="background:#F4C542;"></span>
+            <span class="text-xs font-bold uppercase tracking-widest" style="color:#F4C542;">Social Media Marketing Agency</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="hero-h1 font-black text-white leading-tight mb-6" style="font-size:clamp(2.5rem,6vw,4.5rem);">
+            Costruiamo <span style="color:#F4C542;">brand</span><br>che generano risultati.
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-lg sm:text-xl mb-10 max-w-xl leading-relaxed" style="color:rgba(255,255,255,0.75);">
+            Strategia, contenuti e advertising per trasformare la tua presenza digitale in crescita concreta.
+          </p>
+
+          <!-- CTA buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="contatti.html" class="btn-primary">
+              Prenota una consulenza
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="servizi.html" class="btn-outline">Scopri i servizi</a>
+          </div>
+
         </div>
 
-        <!-- Headline -->
-        <h1 class="hero-h1 font-black text-white leading-tight mb-6" style="font-size:clamp(2.5rem,6vw,4.5rem);">
-          Costruiamo <span style="color:#F4C542;">brand</span><br>che generano risultati.
-        </h1>
-
-        <!-- Subtitle -->
-        <p class="text-lg sm:text-xl mb-10 max-w-xl leading-relaxed" style="color:rgba(255,255,255,0.75);">
-          Strategia, contenuti e advertising per trasformare la tua presenza digitale in crescita concreta.
-        </p>
-
-        <!-- CTA buttons -->
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="contatti.html" class="btn-primary">
-            Prenota una consulenza
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-          <a href="servizi.html" class="btn-outline">Scopri i servizi</a>
+        <!-- Logo fluttuante -->
+        <div class="hidden lg:flex flex-shrink-0 items-center justify-center">
+          <img src="assets/logo trendy trasparente.svg"
+               alt="TRENDY Media Lab"
+               class=""
+               style="width: clamp(286px, 28.6vw, 442px);" />
         </div>
 
       </div>
@@ -398,8 +411,8 @@
   </section>
 
 
-  <!-- ========== ALCUNI LAVORI (PORTFOLIO) ========== -->
-  <section class="py-24" style="background:#F2F2F2;">
+  <!-- ========== ALCUNI LAVORI (PORTFOLIO) — da attivare in seguito ========== -->
+  <section class="py-24" style="background:#F2F2F2; display:none;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14">
         <span class="section-tag">I nostri progetti</span>
