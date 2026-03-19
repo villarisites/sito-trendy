@@ -28,7 +28,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -148,7 +148,7 @@
       <div class="grid lg:grid-cols-2 gap-16 items-center">
 
         <!-- Testo -->
-        <div class="fade-in">
+        <div class="slide-left">
           <span class="section-tag">Chi siamo</span>
           <h2 class="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-6">
             TRENDY Media Lab
@@ -171,7 +171,7 @@
         </div>
 
         <!-- Visual cards -->
-        <div class="grid grid-cols-2 gap-4 fade-in">
+        <div class="grid grid-cols-2 gap-4 slide-right">
           <div class="col-span-2 p-8 rounded-2xl text-white" style="background:#5E2CA5;">
             <div class="text-5xl font-black mb-2" style="color:#F4C542;">100%</div>
             <div class="text-white/80 font-semibold text-lg">Orientati ai risultati</div>
@@ -204,7 +204,7 @@
       <div class="grid md:grid-cols-3 gap-6">
 
         <!-- Chi Siamo -->
-        <a href="chi-siamo.html" class="group p-8 rounded-2xl bg-white border-2 border-gray-100 hover:bg-[#5E2CA5] hover:border-[#5E2CA5] hover:shadow-xl transition-all duration-300 block fade-in">
+        <a href="chi-siamo.html" class="group p-8 rounded-2xl bg-white border-2 border-gray-100 hover:bg-[#5E2CA5] hover:border-[#5E2CA5] hover:shadow-xl transition-all duration-300 block fade-in stagger-child">
           <div class="icon-box mb-6" style="background:rgba(94,44,165,0.1);">
             <svg class="w-5 h-5 text-[#5E2CA5] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -216,7 +216,7 @@
         </a>
 
         <!-- Servizi -->
-        <a href="servizi.html" class="group p-8 rounded-2xl bg-white border-2 border-gray-100 hover:bg-[#5E2CA5] hover:border-[#5E2CA5] hover:shadow-xl transition-all duration-300 block fade-in">
+        <a href="servizi.html" class="group p-8 rounded-2xl bg-white border-2 border-gray-100 hover:bg-[#5E2CA5] hover:border-[#5E2CA5] hover:shadow-xl transition-all duration-300 block fade-in stagger-child">
           <div class="icon-box mb-6" style="background:rgba(94,44,165,0.1);">
             <svg class="w-5 h-5 text-[#5E2CA5] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -228,7 +228,7 @@
         </a>
 
         <!-- Metodo -->
-        <a href="metodo.html" class="group p-8 rounded-2xl bg-white border-2 border-gray-100 hover:bg-[#5E2CA5] hover:border-[#5E2CA5] hover:shadow-xl transition-all duration-300 block fade-in">
+        <a href="metodo.html" class="group p-8 rounded-2xl bg-white border-2 border-gray-100 hover:bg-[#5E2CA5] hover:border-[#5E2CA5] hover:shadow-xl transition-all duration-300 block fade-in stagger-child">
           <div class="icon-box mb-6" style="background:rgba(94,44,165,0.1);">
             <svg class="w-5 h-5 text-[#5E2CA5] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
@@ -285,7 +285,7 @@
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <div class="bg-white p-6 rounded-2xl shadow-sm fade-in">
+        <div class="bg-white p-6 rounded-2xl shadow-sm fade-in stagger-child">
           <div class="icon-box mb-4" style="background:#5E2CA5;">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
@@ -295,7 +295,7 @@
           <p class="text-sm text-gray-500 leading-relaxed">Ogni azione è guidata da obiettivi chiari e misurabili.</p>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-sm fade-in">
+        <div class="bg-white p-6 rounded-2xl shadow-sm fade-in stagger-child">
           <div class="icon-box mb-4" style="background:#5E2CA5;">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -305,7 +305,7 @@
           <p class="text-sm text-gray-500 leading-relaxed">Decisioni basate su analisi concrete, non su intuizioni.</p>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-sm fade-in">
+        <div class="bg-white p-6 rounded-2xl shadow-sm fade-in stagger-child">
           <div class="icon-box mb-4" style="background:#5E2CA5;">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
@@ -315,7 +315,7 @@
           <p class="text-sm text-gray-500 leading-relaxed">Sistemi scalabili per una crescita costante e sostenibile.</p>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl shadow-sm fade-in">
+        <div class="bg-white p-6 rounded-2xl shadow-sm fade-in stagger-child">
           <div class="icon-box mb-4" style="background:#5E2CA5;">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -390,6 +390,81 @@
               <p class="text-sm font-black text-gray-900">Marco F.</p>
               <p class="text-xs text-gray-400">Fondatore, Startup Food & Beverage</p>
             </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== ALCUNI LAVORI (PORTFOLIO) ========== -->
+  <section class="py-24" style="background:#F2F2F2;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="section-tag">I nostri progetti</span>
+        <h2 class="text-4xl font-black text-gray-900 mb-3">Alcuni Lavori</h2>
+        <p class="text-lg text-gray-500 max-w-xl mx-auto">Strategie che hanno generato risultati concreti per i nostri clienti.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Progetto 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 scale-in stagger-child" style="box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+          <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#5E2CA5 0%,#3a1878 100%);">
+            <svg width="80" height="60" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="8" width="64" height="44" rx="6" fill="rgba(255,255,255,0.12)"/>
+              <rect x="16" y="16" width="28" height="4" rx="2" fill="rgba(244,197,66,0.9)"/>
+              <rect x="16" y="24" width="20" height="3" rx="1.5" fill="rgba(255,255,255,0.4)"/>
+              <rect x="16" y="30" width="24" height="3" rx="1.5" fill="rgba(255,255,255,0.3)"/>
+              <rect x="50" y="18" width="14" height="22" rx="3" fill="rgba(244,197,66,0.2)" stroke="rgba(244,197,66,0.6)" stroke-width="1.5"/>
+              <path d="M57 24 L57 34" stroke="#F4C542" stroke-width="2" stroke-linecap="round"/>
+              <path d="M53 29 L61 29" stroke="#F4C542" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <span class="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3" style="background:rgba(94,44,165,0.1);color:#5E2CA5;">Social Media Management</span>
+            <h3 class="text-lg font-black text-gray-900 mb-2">Studio di Estetica Milano</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Da 800 a 12.000 follower reali in 3 mesi. Richieste di preventivo triplicate.</p>
+          </div>
+        </div>
+
+        <!-- Progetto 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 scale-in stagger-child" style="box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+          <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#F4C542 0%,#e6a800 100%);">
+            <svg width="80" height="60" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="14" width="22" height="32" rx="4" fill="rgba(0,0,0,0.15)"/>
+              <rect x="36" y="8" width="22" height="32" rx="4" fill="rgba(0,0,0,0.15)"/>
+              <rect x="10" y="14" width="22" height="3" rx="1.5" fill="rgba(255,255,255,0.5)"/>
+              <rect x="36" y="8" width="22" height="3" rx="1.5" fill="rgba(255,255,255,0.5)"/>
+              <path d="M14 30 Q25 20 36 24 Q47 28 58 18" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <circle cx="58" cy="18" r="3" fill="rgba(255,255,255,0.9)"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <span class="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3" style="background:rgba(244,197,66,0.15);color:#b07d00;">Advertising</span>
+            <h3 class="text-lg font-black text-gray-900 mb-2">Brand Fashion E-commerce</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">+180% fatturato e-commerce in 6 mesi con campagne Meta Ads ottimizzate.</p>
+          </div>
+        </div>
+
+        <!-- Progetto 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 scale-in stagger-child" style="box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+          <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#111111 0%,#2d1f4e 100%);">
+            <svg width="80" height="60" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="30" r="20" fill="rgba(255,255,255,0.05)" stroke="rgba(94,44,165,0.6)" stroke-width="1.5"/>
+              <circle cx="40" cy="30" r="13" fill="rgba(94,44,165,0.2)"/>
+              <path d="M32 30 L37 35 L48 24" stroke="#F4C542" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="14" y="12" width="8" height="8" rx="2" fill="rgba(244,197,66,0.3)"/>
+              <rect x="58" y="12" width="8" height="8" rx="2" fill="rgba(244,197,66,0.3)"/>
+              <rect x="14" y="40" width="8" height="8" rx="2" fill="rgba(244,197,66,0.3)"/>
+              <rect x="58" y="40" width="8" height="8" rx="2" fill="rgba(244,197,66,0.3)"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <span class="inline-block text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3" style="background:rgba(17,17,17,0.07);color:#374151;">Branding & Strategia</span>
+            <h3 class="text-lg font-black text-gray-900 mb-2">Startup Food & Beverage</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Identità visiva completa e lancio sui social. Brand oggi riconoscibile e ricercato.</p>
           </div>
         </div>
 
@@ -501,11 +576,11 @@
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
     });
 
-    // Fade-in on scroll
+    // Fade-in / slide / scale on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
     }, { threshold: 0.15 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in').forEach(el => observer.observe(el));
   </script>
   <script src="js/theme.js"></script>
   <script>
@@ -542,5 +617,6 @@
   </script>
   <script src="js/cookie-banner.js"></script>
   <script src="js/whatsapp-btn.js"></script>
+  <script src="js/cursor.js" defer></script>
 </body>
 </html>

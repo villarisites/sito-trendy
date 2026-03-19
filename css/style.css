@@ -518,3 +518,109 @@ html.dark .faq-body { color: #9B8AC4; }
   box-shadow: 0 0 0 3px rgba(220,38,38,0.1) !important;
 }
 html.dark .field-error { color: #f87171; }
+
+
+/* ==============================================
+   PREMIUM UPGRADE
+   ============================================== */
+
+/* ---- Font display: Space Grotesk per headings ---- */
+h1, h2, h3 {
+  font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ---- Navbar compact on scroll ---- */
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: box-shadow 0.3s, padding 0.3s;
+}
+.navbar.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navbar .flex { transition: height 0.3s; }
+.navbar.scrolled .flex[class*="h-16"] { height: 3rem !important; }
+
+/* ---- Card glow on hover ---- */
+.card:hover {
+  box-shadow: 0 8px 32px rgba(94,44,165,0.12), 0 0 24px rgba(94,44,165,0.18);
+}
+
+/* ---- WhatsApp pulse ---- */
+@keyframes whatsapp-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  50%       { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
+}
+.whatsapp-pulse {
+  animation: whatsapp-pulse 2s ease-in-out infinite;
+}
+
+/* ---- Slide animations ---- */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.slide-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.slide-left.visible,
+.slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---- Scale-in animation ---- */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---- Stagger children ---- */
+.stagger-child:nth-child(1) { transition-delay: 0ms; }
+.stagger-child:nth-child(2) { transition-delay: 100ms; }
+.stagger-child:nth-child(3) { transition-delay: 200ms; }
+.stagger-child:nth-child(4) { transition-delay: 300ms; }
+
+/* ---- Custom cursor ---- */
+#cursor-dot,
+#cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+}
+#cursor-dot {
+  width: 8px; height: 8px;
+  background: var(--violet);
+  transform: translate(-50%, -50%);
+}
+#cursor-ring {
+  width: 36px; height: 36px;
+  border: 2px solid var(--violet);
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s ease, width 0.2s ease, height 0.2s ease, opacity 0.3s;
+}
+#cursor-ring.cursor-hover {
+  width: 54px; height: 54px;
+  border-color: var(--yellow);
+  background: rgba(244,197,66,0.08);
+}
+
+/* ---- Dark mode: nuovi elementi ---- */
+html.dark #cursor-ring { border-color: #a78bfa; }
+html.dark #cursor-ring.cursor-hover { border-color: var(--yellow); }
+html.dark .slide-left,
+html.dark .slide-right,
+html.dark .scale-in { /* eredita transizioni */ }

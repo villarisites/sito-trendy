@@ -6,6 +6,7 @@
   btn.rel = 'noopener noreferrer';
   btn.setAttribute('aria-label', 'Contattaci su WhatsApp');
 
+  btn.className = 'whatsapp-pulse';
   btn.style.cssText = [
     'position:fixed', 'bottom:1.5rem', 'right:1.5rem', 'z-index:9998',
     'width:3.5rem', 'height:3.5rem',
