@@ -141,7 +141,7 @@ body {
   inset: 0;
   background:
     linear-gradient(rgba(94, 44, 165, 0.55), rgba(40, 15, 86, 0.70)),
-    url('../assets/Art 3D GIF by Pi-Slices.gif') center/cover no-repeat;
+    url('../assets/hero-bg.gif') center/cover no-repeat;
   filter: blur(3px);
   transform: scale(1.05); /* evita aloni bianchi ai bordi */
   z-index: 0;
