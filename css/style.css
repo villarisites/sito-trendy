@@ -25,12 +25,16 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--dark);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 ::selection { background: var(--violet); color: #fff; }
